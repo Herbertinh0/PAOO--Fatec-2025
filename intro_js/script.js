@@ -1,4 +1,4 @@
-//*Aula 01 (12/02/2025) - Introdução ao JavaScript*//
+////*Aula 01 (12/02/2025) - Introdução ao JavaScript*////
 
 ////*FUNÇÕES
 // function hello() {
@@ -154,7 +154,7 @@
 // umaFuncao() 
 
 
-////////////////////////INTERVALO DA ENTREVISTA, VER A AULA GRAVADA E ATUALIZAR O CÓDIGO////////////////////////
+////////////////////////INTERVALO DA ENTREVISTA, VER A AULA GRAVADA E ATUALIZAR O CÓDIGO//////////////////////////
 
 
 // function f(){
@@ -248,3 +248,6 @@
 // const valores = [1, 2, 3, 4]
 // const res = valores.reduce((ac, v) => ac + v) 
 // console.log(res)
+
+
+////AULA 03 (19/03/2025)////
