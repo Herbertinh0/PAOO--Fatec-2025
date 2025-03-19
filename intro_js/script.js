@@ -250,4 +250,100 @@
 // console.log(res)
 
 
-////AULA 03 (19/03/2025)////
+
+////AULA 03 (19/03/2025) - OBJETOS E DESESTRUTURAÇÃO EM JAVASCRIPT////
+
+
+
+////*OBJETOS LITERAIS E DESESTRUTURAÇÃO EM JAVASCRIPT
+////EXEMPLO: uma pessoa que se chama joão e tem 17 anos
+// const pessoa = {
+//         nome: 'João',
+//         idade: 17
+//     }
+//     console.log(pessoa.nome)
+//     console.log(pessoa.idade)
+
+//     const { nome, idade } = pessoa
+//     console.log(nome, idade)
+
+////EXEMPLO: uma pessoa que se chama maria e tem 21 anos e mora na rua B, número 10
+
+// const pessoa = {
+//     nome: 'Maria',
+//     idade: 21,
+//     logradouro: 'Rua B',
+//     numero: 10
+// }
+
+// const pessoa = {
+//     nome: 'Maria',
+//     idade: 21,  
+//     endereco: {
+//         logradouro: 'Rua B',
+//         numero: 10
+//     }
+// }
+
+// console.log(pessoa.nome)    
+// console.log(pessoa.idade)
+// console.log(pessoa.logradouro)
+// console.log(pessoa.numero)
+
+///Uma concessionária que tem CNPJ e endereço (logradouro, numero e bairro). Ela tem um estoque de veiculos. 
+//// Cada veiculo tem marca, modelo e ano de fabricação. Em um determinado momento, talvez o estoque esteja vazio. Noutro, talvez ele tenha 17 veiculos.
+
+// const concessionaria = {
+//     cnpj: '123456789',
+//     endereco: {
+//         logradouro: 'Rua C',
+//         numero: 20,
+//         bairro: 'Jardim Europa'
+//     },
+//     estoque: [
+//         {marca: 'Mercedes', modelo: 'Flecha de prata', ano: 1978},
+//         {marca: 'Ferrari', modelo: 'F40', ano: 1988},
+//         {marca: 'Ford', modelo: 'Mustang', ano: 1967}
+//     ]
+// }
+
+////EXEMPLO DO PROFESSOR:
+
+// const concessionaria = {
+//     cnpj: '123456789',
+//     endereco: {
+//         logradouro: 'Rua C',
+//         numero: 20,
+//         bairro: 'Jardim Europa'
+//     },
+//     veiculos: [
+//         {
+//             marca: 'Mercedes', modelo: 'Flecha de prata', ano: 1978
+//         },
+//         {
+//             marca: 'Ferrari', modelo: 'F40', ano: 1988
+//         },
+//         {marca: 'Ford', modelo: 'Mustang', ano: 1967}
+//     ]
+// }
+
+////mostre para chegar no modelo F40
+// console.log(concessionaria.veiculos[1].modelo)
+
+////mostrar somente a marca de cada veículo a cada iteração
+// for (let veiculo of concessionaria.veiculos) {
+//     console.log(veiculo.marca)
+// }
+
+// // Uma calculadora realiza operações de soma e subtração
+// //a soma deve ser feita com uma função regular, ou seja, usando function
+// //a subtração deve ser feita com uma arrow function sem return
+// const calculadora = {
+//     soma: function (a, b){
+//         return a + b
+//     },
+//     subtracao: (a, b) => a - b
+// }
+// console.log(calculadora.soma(2, 3))
+// console.log(calculadora.subtracao(3, 2))
+
