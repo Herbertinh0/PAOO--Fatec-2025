@@ -347,3 +347,52 @@
 // console.log(calculadora.soma(2, 3))
 // console.log(calculadora.subtracao(3, 2))
 
+////////////////////////////////////////////////////////////////////////
+
+////PROCESSAMENTO SÍNCRONO (BLOQUEANTE) E ASSÍNCRONO (NÃO BLOQUEANTE)
+
+//// I/O BOUND: operações de entrada e saída (leitura de arquivos, requisições HTTP, acesso a banco de dados)
+////Exemplo de I/O Bound:
+// function dobro(n){
+//     return n * 2
+// }
+// const res = dobro(5)
+// console.log(res)
+
+////Exemplo de I/O Bound:
+
+// const fs = require('fs')
+// const exibirConteudo = (erro, conteudo) => {
+//     if (erro) {
+//         console.log(`Deu erro: ${erro}`)
+//     }
+//     else{
+//         console.log(`Arquivo lido com sucesso: ${conteudo.toString()}`)
+//         const dobro = Number(conteudo.toString()) * 2
+//         //callback: função que define mas não chama
+//         const finalizar = (erro) => {
+//             console.log(`${erro ? 'Deu erro ' + erro : 'Dobro armazenado com sucesso. C'}`) 
+//         }
+//         fs.writeFile('dobro.txt', dobro.toString(), finalizar)
+//         console.log("A")
+//     }
+// }
+// fs.readFile('arquivo.txt', exibirConteudo) //assíncrono I/O Bound
+// console.log("B")
+
+////Simulação de promisses
+function calculoDemorado(n){
+    //Construir um objeto do tipo Promise, entregando para o construtor a função que representa a computação demorada
+    const p = new Promise((resolve, reject) => {
+        let acumulador = 0;
+        for (let i = 1; i < n; i++) 
+            acumulador += i
+        resolve(acumulador)
+    })
+    return p
+}
+
+const promiseResultante = calculoDemorado(10)
+promiseResultante.then(res => {
+    console.log(`Deu certo: ${res}`)
+})
