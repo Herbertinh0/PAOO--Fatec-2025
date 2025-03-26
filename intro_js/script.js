@@ -381,18 +381,68 @@
 // console.log("B")
 
 ////Simulação de promisses
-function calculoDemorado(n){
-    //Construir um objeto do tipo Promise, entregando para o construtor a função que representa a computação demorada
-    const p = new Promise((resolve, reject) => {
-        let acumulador = 0;
-        for (let i = 1; i < n; i++) 
-            acumulador += i
-        resolve(acumulador)
-    })
-    return p
-}
+// function calculoDemorado(n){
+//     //Construir um objeto do tipo Promise, entregando para o construtor a função que representa a computação demorada
+//     const p = new Promise((resolve, reject) => {
+//         let acumulador = 0;
+//         for (let i = 1; i < n; i++) 
+//             acumulador += i
+//         resolve(acumulador)
+//     })
+//     return p
+// }
 
-const promiseResultante = calculoDemorado(10)
-promiseResultante.then(res => {
-    console.log(`Deu certo: ${res}`)
-})
+// const promiseResultante = calculoDemorado(10)
+// promiseResultante.then(res => {
+//     console.log(`Deu certo: ${res}`)
+// })
+
+//// AULA 04 (26/03/2025) - PROMISES E ASYNC/AWAIT EM JAVASCRIPT////
+
+////*PROMISES
+
+// function calculodemorado(n){
+//     const p =  new Promise((resolve, reject) => {
+//         let ac =  0
+//         for (let i = 1; i <= n; i++) ac += i
+//         resolve(ac)
+//     })
+//     return p
+// }
+
+// const minhaPromise = calculodemorado(10)
+// minhaPromise.then((res) => {
+//     console.log(`Sucesso: ${res}`)
+// })
+
+////*ATIVIDADES
+
+//Minha solução:
+// function calculoRapidinho(n){
+//     //verificar se n é negativo sem if nem switch case
+//     return n < 0 ? Promise.reject('Use apenas números positivos!') : Promise.resolve((n / 2) * (n + 1))
+// }
+
+//Solução do Bossini:
+// function calculoRapidinho(n){
+//     return n < 0 ? 
+//         Promise.reject('Use apenas números positivos!') : 
+//         Promise.resolve((n / 2) * (n + 1))}
+
+// calculoRapidinho(10).then(abc => {
+//     console.log(`Sucesso: ${abc}`)
+// })
+// .catch(erro => (`Erro: ${erro}`))
+
+//Reescreva a função calculoRapidinho sem resolve e reject
+// function calculoRapidinho(n) {
+//     if (n < 0) {
+//         return Promise.reject('Só números positivos, Javascripto!');
+//     }
+//     return Promise.resolve((n / 2) * (n + 1));
+// }
+
+// calculoRapidinho(10).then(abc => {
+//         console.log(`Sucesso: ${abc}`)
+//     })
+//     .catch(erro => (`Erro: ${erro}`))
