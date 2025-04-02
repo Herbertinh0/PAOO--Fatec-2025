@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const protocol = 'https'
 const baseUrl = 'api.openweathermap.org/data/2.5/forecast'
-const appId = 'd054dca8420da46a7296831108bd7373'
+const appId = ''
 const q = 'Itu'
 const units = 'metric'
 const lang = 'pt_br'
