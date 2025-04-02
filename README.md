@@ -16,7 +16,8 @@ O objetivo do projeto é explorar conceitos avançados de POO aplicados à lingu
 - [ ] Encapsulamento e Modificadores de Acesso  
 - [ ] Uso de Polimorfismo  
 - [ ] Funções (async, await, promises, etc.)
-
+- [ ] Introdução á Microserviços
+      
 ## 📂 Estrutura do Projeto  
 
 ```
